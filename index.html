@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>Body mass calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <section id="main" class="lg:pb-20">
+        <div class="w-full h-[1120px] relative flex justify-center">
+            <div
+                class="absolute w-full md:w-full md:left-[px] lg:w-[996px] lg:left-[24px] lg:h[737px] h-[640px] ps-0 md:ps-0 lg:ps-[142px] bg-[linear-gradient(290deg,_rgb(214,230,254)_0%,_rgba(214,252,254,0)_100%)] lg:rounded-b-3xl  flex justify-center md:justify-center lg:justify-start">
+                <div
+                    class="absolute top-[32px] w-[40px] h-[40px] md:top-[32px] md:w-[40px] md:h-[40px] lg:top-[75px] lg:w-[64px] lg:h-[64px]">
+                    <img src="./images/logo.svg" alt="">
+                </div>
+                <div
+                    class="absolute top-[96px] w-[327px] h-[327px] md:top-[96px] md:w-[686px] md:h-[106px] lg:top-[266px] lg:w-[574px] lg:h-[271px] lg:pe-[100px] space-y-4">
+                    <h1
+                        class="text-[48px] leading-[110%] tracking-[-5%] text-center md:text-center lg:text-left  font-semibold">
+                        Body Mass
+                        Index Calculator
+                    </h1>
+                    <p class="text-center md:text-center lg:text-justify text-[16px] text-[#5E6E85]">
+                        Better understand your weight in relation to your height using our body mass index (BM)
+                        calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable
+                        starting point to evaluate your overall health and well-being.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="absolute top-[471px] w-[328px] md:top-[354px] md:w-[686px] lg:top-[80px] lg:left-[749px] lg:w-[574px] p-[24px] md:p-[24px] lg:p-[32px] flex flex-col justify-between bg-white rounded-3xl shadow-2xl space-y-[24px] md:space-y-[24px] lg:space-y-[32px]">
+                <h1 class="text-[#253347] text-[18px] font-bold">Enter your details below</h1>
+                <div class="flex flex-row justify-between relative">
+                    <div class="flex flex-row items-center space-x-[18px]">
+                        <input type="radio" name="unit" id="metricBtn" class="w-[31px] h-[31px] hover:border-[#345FF6] focus:bg-[#5E6E85] duration-100" placeholder="O">
+                        <label for="" class="text-[#253347] text-[15px] font-bold">Metric</label>
+                    </div>
+                    <div
+                        class="absolute left-[152px] md:left-[323px] lg:left-[283px] flex flex-row items-center space-x-[18px]">
+                        <input type="radio" name="unit" id="imperialBtn" class="w-[31px] h-[31px] text-[#5E6E85] font-bold"
+                            placeholder="O">
+                        <label for="" class=" text-[#253347] text-[15px] font-bold">Imperial</label>
+                    </div>
+                </div>
+                <div id="metricInputDiv" class="flex flex-col md:flex-row lg:flex-row justify-between space-y-2 space-x-0 md:space-y-0 lg:space-y-0 lg:space-x-2 md:space-x-2">
+                        <div class=" md:w-[299px] lg:w-[243px] flex flex-col space-y-1">
+                            <label for="" class="text-[14px] text-[#5E6E85] leading-[150%] ">Height</label>
+                            <div
+                                class="flex flex-row justify-between w-full h-[69px] px-[24px] py-[20px] rounded-xl border border-black">
+                                <input type="text" name="" id="cmInput"
+                                    class="w-[173px] h-[29px] outline-none text-[#253347] placeholder:text-[#5E6E85] font-bold text-[20px]"
+                                    placeholder="0">
+                                <span class="text-[20px] text-[#345FF6] font-bold tracking-wide">cm</span>
+                            </div>
+                        </div>  
+                        <div class=" md:w-[299px] lg:w-[243px] flex flex-col space-y-1">
+                            <label for="" class="text-[14px] text-[#5E6E85] leading-[150%] ">Weight</label>
+                            <div
+                                class="flex flex-row justify-between w-full h-[69px] px-[24px] py-[20px] rounded-xl border border-black">
+                                <input type="text" name="" id="kgInput"
+                                    class="w-[173px] h-[29px] outline-none text-[#253347] placeholder:text-[#5E6E85] font-bold text-[20px]"
+                                    placeholder="0">
+                                <span class="text-[20px] text-[#345FF6] font-bold tracking-wide">kg</span>
+                            </div>
+                        </div>  
+                </div>
+                <div id="imperialInputDiv"
+                    class="hidden w-[280px] md:w-[622px]  lg:w-[510px] flex flex-col space-y-2 md:flex-col md:justify-between lg:flex-col lg:justify-start md:space-y-2 lg:space-y-2">
+                    <div class="md:w-[299px] lg:w-[243px] flex flex-col space-y-1">
+                        <label for="" class="text-[14px] text-[#5E6E85] leading-[150%] ">Height</label>
+                        <div class="flex flex-col md:flex-row lg:flex-row space-y-2 space-x-0 md:space-y-0 md:space-x-4 lg:space-y-0 lg:space-x-4">
+                            <div
+                                class="flex flex-row justify-between w-full h-[69px] px-[24px] py-[20px] rounded-xl border border-black">
+                                <input type="text" name="" id="feetInput"
+                                    class="w-[173px] h-[29px] outline-none text-[#253347] placeholder:text-[#5E6E85] font-bold text-[20px]"
+                                    placeholder="0">
+                                <span class="text-[20px] text-[#345FF6] font-bold tracking-wide">ft</span>
+                            </div>
+                            <div
+                                class="flex flex-row justify-between w-full h-[69px] px-[24px] py-[20px] rounded-xl border border-black">
+                                <input type="text" name="" id="inchInput"
+                                    class="w-[173px] h-[29px] outline-none text-[#253347] placeholder:text-[#5E6E85] font-bold text-[20px]"
+                                    placeholder="0">
+                                <span class="text-[20px] text-[#345FF6] font-bold tracking-wide">in</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-[299px] lg:w-[243px] flex flex-col space-y-1">
+                        <label for="" class="text-[14px] text-[#5E6E85] leading-[150%] ">Weight</label>
+
+                        <div class="flex flex-col md:flex-row lg:flex-row space-y-2 space-x-0 md:space-y-0 md:space-x-4 lg:space-y-0 lg:space-x-4">
+                            <div
+                                class="flex flex-row justify-between w-full h-[69px] px-[24px] py-[20px] rounded-xl border border-black">
+                                <input type="text" name="" id="stInput"
+                                    class="w-[173px] h-[29px] outline-none text-[#253347] placeholder:text-[#5E6E85] font-bold text-[20px]"
+                                    placeholder="0">
+                                <span class="text-[20px] text-[#345FF6] font-bold tracking-wide">st</span>
+                            </div>
+                            <div
+                                class="flex flex-row justify-between w-full h-[69px] px-[24px] py-[20px] rounded-xl border border-black">
+                                <input type="text" name="" id="lbsInput"
+                                    class="w-[173px] h-[29px] outline-none text-[#253347] placeholder:text-[#5E6E85] font-bold text-[20px]"
+                                    placeholder="0">
+                                <span class="text-[20px] text-[#345FF6] font-bold tracking-wide">lbs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="w-[280px] h-[257px] flex flex-col md:flex-row md:justify-between md:space-y-0 md:space-x-[84px] md:w-[622px] md:h-[149px] lg:w-[510px] lg:h-[166px] p-[32px] rounded-2xl md:rounded-s-2xl md:rounded-e-full space-y-[24px] bg-[#345FF6]">
+                    <div class="flex flex-col space-y-[24px]">
+                        <p class="text-white text-[13px]">Your BMI is...</p>
+                        <h1 class="text-white text-[48px] leading-[110%] tracking-[-5%] font-semibold" id="bmiValue">22.2</h1>
+                    </div>
+                    <div>
+                        <p class="text-white text-[13px]">Your BMI suggests you’re a <span id="state">healthy</span> weight. Your ideal weight
+                            is
+                             <span id="idealWeight"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden h-[200px] w-[85px] md:hidden lg:flex lg:absolute lg:top-[680px] lg:left-[1188px]">
+            <img src="./images/pattern-curved-line-left.svg" alt="">
+        </div>
+        <div
+            class="absolute top-[1260px] w-full md:w-full h-[744px] md:top-[917px] md:-left-[90px] md:h-[441px] lg:top-[801px] lg:w-[1160px] lg:left-[140px] lg:h-[533px] flex flex-col md:flex-row items-center space-y-[42px] md:space-x-[72px] lg:space-x-[131px] md:space-y-0">
+            <div class="w-[328px] h-[354px] md:w-[328px] md:h-[354px] lg:w-[564px] lg:h-[533px]">
+                <img src="./images/image-man-eating.webp" alt="">
+            </div>
+            <div class="space-y-[32px] md:space-y-[32px] lg:space-y-[35px] w-[328px] md:w-[328px] lg:w-[465px]">
+                <h1 class="text-[32px] md:text-[32px] lg:text-[48px] leading-[110%] tracking-[-5%] font-semibold">What
+                    your BMI result means</h1>
+                <p class="text-[16px] text-[#5E6E85]">A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
+                    Maintaining a healthy weight may lower your chances of experiencing health issues later on, such as
+                    obesity and type 2 diabetes. Aim for a nutritious diet with reduced fat and sugar content,
+                    incorporating ample fruits and vegetables. Additionally, strive for regular physical activity,
+                    ideally about 30 minutes daily for five days a week.
+                </p>
+            </div>
+        </div>
+        <div
+            class="absolute top-[2008px] w-full md:w-full lg:w-[1392] h-[879px]  md:top-[1424px] md:h-[503px]  lg:top-[1430px] lg:h-[402px] lg:left-[24px] py-6 md:py-3 md:px-3 flex flex-col items-center md:flex-col md:items-center lg:flex-row lg:items-center lg:justify-center space-y-[40px] space-x-0 md:space-x-0 md:space-y-[40px] lg:space-y-0 lg:space-x-[32px] bg-[linear-gradient(290deg,_rgb(214,230,254)_0%,_rgba(214,252,254,0)_100%)]">
+
+            <div
+                class="flex flex-col md:flex-row md:items-center lg:flex-col lg:items-start w-[328px] md:w-[686px] lg:w-[365px]  items-start space-y-[32px] space-x-0 md:space-x-5 md:space-y-[24px] lg:space-x-[32px]">
+                <img src="./images/icon-eating.svg" alt="" class="w-[64px] h-[64px] ms-0 md:ms-0 lg:ms-6">
+                <div class="flex flex-col items-start space-y-[20px]">
+                    <h1 class="text-[20px] font-semibold">Healthy eating</h1>
+                    <p class="text-[14px] text-[#5E6E85]">Healthy eating promotes weight control, disease prevention,
+                        better digestion, immunity, mental clarity, and mood.</p>
+                </div>
+
+            </div>
+            <div
+                class="flex flex-col w-[328px] md:w-[686px] lg:w-[365px] md:flex-row md:items-center lg:flex-col lg:items-start items-start space-y-[32px] md:space-x-5 md:space-y-[24px] lg:space-x-[32px]">
+                <img src="./images/icon-exercise.svg" alt="" class="w-[64px] h-[64px] ms-0 md:ms-0 lg:ms-6">
+                <div class="flex flex-col  space-y-[20px]">
+                    <h1 class="text-[20px] font-semibold">Regular exercise</h1>
+                    <p class="text-[14px] text-[#5E6E85]">Exercise improves fitness, aids weight control, elevates mood,
+                        and reduces disease risk, fostering wellness and longevity.</p>
+                </div>
+
+            </div>
+            <div
+                class="flex flex-col w-[328px] md:w-[686px] lg:w-[365px] md:flex-row md:items-center lg:flex-col lg:items-start items-start space-y-[32px] md:space-x-5 md:space-y-[24px] lg:space-x-[32px]">
+                <img src="./images/icon-sleep.svg" alt="" class="w-[64px] h-[64px] ms-0 md:ms-0 lg:ms-6">
+                <div class="flex flex-col  space-y-[20px]">
+                    <h1 class="text-[20px] font-semibold">Adequate sleep</h1>
+                    <p class="text-[14px] text-[#5E6E85]">Sleep enhances mental clarity, emotional stability, and
+                        physical wellness, promoting overall restoration and rejuvenation.</p>
+                </div>
+
+            </div>
+        </div>
+        <div
+            class="absolute top-[2959px] w-full md:top-[2023px] lg:top-[1952px] lg:w-[1160px] lg:h-[704px] lg:left-[140px] md:pb-10 lg:pb-32 flex flex-col items-center md:flex-col md:items-center lg:items-start">
+            <div class="hidden h-[122px] w-[94px] md:hidden lg:flex lg:absolute lg:top-[220px] lg:left-[235px]">
+                <img src="./images/pattern-curved-line-right.svg" alt="">
+            </div>
+            <div class="w-[327px] md:w-[686px] space-y-[36px]">
+                <div class="flex flex-col space-y-[32px] md:space-y-[32px] lg:space-y-[35px]">
+                    <h1
+                        class="text-[32px] md:text-[32px] lg:text-[48px] leading-[110%] tracking-[-5%] font-semibold text-center md:text-center lg:text-left">
+                        Limitations of BMI</h1>
+                    <p class="text-[14px] md:text-[14px] lg:text-[16px] text-[#5E6E85] md:text-center lg:text-left">
+                        Although BMI is often a practical indicator of healthy weight,
+                        it is not suited for every person. Specific groups should carefully consider their BMI outcomes,
+                        and in certain cases, the measurement may not be beneficial to use.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:relative">
+                    <div
+                        class="w-full md:w-full lg:w-[365px] lg:h-[232px] lg:absolute lg:-top-[200px] lg:left-[836px] p-[24px] md:p-[24px] lg:p-[44px] space-y-[16px] md:space-y-[16px] rounded-xl shadow-xl">
+                        <div class="flex flex-row space-x-[10px]">
+                            <img src="./images/icon-gender.svg" alt="">
+                            <h2 class="text-[20px]">Gender</h2>
+                        </div>
+                        <p class="text-[14px] text-[#5E6E85]">The development and body fat composition of girls and boys
+                            vary with age. Consequently, a child's age and gender are considered when evaluating their
+                            BMI.
+                        </p>
+                    </div>
+                    <div
+                        class="w-full md:w-full lg:w-[365px] lg:h-[184px] lg:absolute lg:top-[70px] lg:left-[538px] p-[24px] space-y-[16px] rounded-xl shadow-xl">
+                        <div class="flex flex-row space-x-[10px]">
+                            <img src="./images/icon-age.svg" alt="">
+                            <h2 class="text-[20px]">Age</h2>
+                        </div>
+                        <p class="text-[14px] text-[#5E6E85]">In aging individuals, increased body fat and muscle loss
+                            may cause BMI to underestimate body fat content.
+                        </p>
+                    </div>
+                    <div
+                        class="w-full md:w-full lg:w-[365px] lg:h-[184px] lg:absolute lg:top-[70px] lg:left-[935px] p-[24px] space-y-[16px] rounded-xl shadow-xl">
+                        <div class="flex flex-row space-x-[10px]">
+                            <img src="./images/icon-muscle.svg" alt="">
+                            <h2 class="text-[20px]">Muscle</h2>
+                        </div>
+                        <p class="text-[14px] text-[#5E6E85]">BMI may misclassify muscular individuals as overweight or
+                            obese, as it doesn't differentiate muscle from fat.
+                        </p>
+                    </div>
+                    <div
+                        class="w-full md:w-full lg:w-[365px] lg:h-[232px] lg:absolute lg:top-[270px] lg:left-[339px] p-[24px] md:p-[24px] lg:p-[44px] space-y-[16px] rounded-xl shadow-xl">
+                        <div class="flex flex-row space-x-[10px]">
+                            <img src="./images/icon-pregnancy.svg" alt="">
+                            <h2 class="text-[20px]">Pregnancy</h2>
+                        </div>
+                        <p class="text-[14px] text-[#5E6E85]">Expectant mothers experience weight gain due to their
+                            growing baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise health risks
+                            for both mother and child.
+                        </p>
+                    </div>
+
+                    <div
+                        class="w-full lg:w-[365px] md:w-[365px] lg:h-[232px] lg:absolute lg:top-[270px] lg:left-[736px] p-[24px] md:p-[24px] lg:p-[44px] space-y-[16px] rounded-xl shadow-xl md:col-span-2 md:place-self-center">
+                        <div class="flex flex-row space-x-[10px]">
+                            <img src="./images/icon-race.svg" alt="">
+                            <h2 class="text-[20px]">Race</h2>
+                        </div>
+                        <p class="text-[14px] text-[#5E6E85]">TCertain health concerns may affect individuals of some
+                            Black and Asian origins at lower BMIs than others. To learn more, it is advised to discuss
+                            this with your GP or practice nurse.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script src="script.js"></script>
+</body>
+
+</html>

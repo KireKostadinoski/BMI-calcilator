@@ -5,8 +5,8 @@ const imperialBtn = document.getElementById('imperialBtn');
 const metricInputDiv = document.getElementById("metricInputDiv");
 const imperialInputDiv = document.getElementById("imperialInputDiv");
 
-const state = document.getElementById("state");
-const idealWeigth = document.getElementById("idealWeigth");
+let state = document.getElementById("state");
+let idealWeigth = document.getElementById("idealWeigth");
 
 // Add event listeners for the radio buttons
 metricBtn.addEventListener('change', function() {
